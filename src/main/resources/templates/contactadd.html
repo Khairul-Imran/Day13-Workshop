@@ -8,11 +8,11 @@
 </head>
 <body>
   <div class="container">
-    <a th:href="@{contact/list}" class="btn btn-primary">Back to Contacts List</a>
+    <a th:href="@{/contact/list}" class="btn btn-primary">Back to Contacts List</a>
     <br><br>
     <h1>Add New Contact</h1>
     <hr>
-    <form action="POST" th:action="@{/contact/savecontact}" th:object="${contact}">
+    <form method="POST" th:action="@{/contact/savecontact}" th:object="${contact}">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input type="text" class="form-control" name="name" th:field="*{name}">
@@ -33,7 +33,7 @@
 
       <div class="mb-3">
         <label for="birthday" class="form-label">Birthday</label>
-        <input type="text" class="form-control" name="birthday" th:field="*{birthday}">
+        <input type="date" class="form-control" name="birthday" th:field="*{birthday}">
       </div>
       <div class="alert alert-danger" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></div>
 

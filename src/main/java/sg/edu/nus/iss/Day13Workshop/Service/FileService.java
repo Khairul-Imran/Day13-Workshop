@@ -17,8 +17,8 @@ public class FileService {
   private static final String CONTACTS_DIRECTORY_PATH = "/Users/khairulimran/data/contacts";
   // private static final String CONTACTS_DIRECTORY = "contacts";
 
-  public void createContactsDirectory() {
-    File directory = new File(CONTACTS_DIRECTORY_PATH);
+  public void createContactsDirectory() { // Might not need this.
+    File directory = new File(CONTACTS_DIRECTORY_PATH + "/contacts");
     if (!directory.exists()) {
       directory.mkdirs();
     }

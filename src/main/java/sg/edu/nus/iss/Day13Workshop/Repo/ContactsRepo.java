@@ -21,7 +21,7 @@ public class ContactsRepo {
   @Autowired ContactIdService contactIdService;
   @Autowired FileService fileService;
 
-  final String directoryPath = "/Users/khairulimran/data";
+  // final String directoryPath = "/Users/khairulimran/data";
   private List<Contact> contacts;
 
 
@@ -39,6 +39,8 @@ public class ContactsRepo {
 
     contact = new Contact("Ronaldo", "CR7@gmail.com", "77777777", dt);
     contacts.add(contact);
+
+    // fileService.createContactsDirectory();
   }
 
 
