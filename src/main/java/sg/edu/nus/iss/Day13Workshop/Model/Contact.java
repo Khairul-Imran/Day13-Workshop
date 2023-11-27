@@ -45,4 +45,14 @@ public class Contact {
     this.contactId = ""; // Proper Id to be set when saving the contact, using the service.
   }
 
+  public String formatForWritingToFile() {
+    StringBuilder formattedData = new StringBuilder();
+    formattedData.append("Name: ").append(getName()).append("\n");
+    formattedData.append("Email: ").append(getEmail()).append("\n");
+    formattedData.append("Phone Number: ").append(getPhoneNumber()).append("\n");
+    formattedData.append("DOB: ").append(getBirthday()).append("\n");
+
+    return formattedData.toString();
+  }
+
 }

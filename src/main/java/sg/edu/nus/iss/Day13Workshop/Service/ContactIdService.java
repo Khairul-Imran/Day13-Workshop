@@ -2,8 +2,11 @@ package sg.edu.nus.iss.Day13Workshop.Service;
 
 import java.security.SecureRandom;
 
+import org.springframework.stereotype.Service;
+
 import sg.edu.nus.iss.Day13Workshop.Model.Contact;
 
+@Service
 public class ContactIdService {
 
   public Contact assignContactId(Contact contact) {
