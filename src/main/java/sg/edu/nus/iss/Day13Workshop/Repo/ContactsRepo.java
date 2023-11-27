@@ -1,10 +1,6 @@
 package sg.edu.nus.iss.Day13Workshop.Repo;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.util.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -29,7 +25,7 @@ public class ContactsRepo {
   private List<Contact> contacts;
 
 
-  // To add constructor.
+  // Constructor.
   public ContactsRepo() throws ParseException{
     if (contacts == null) {
       contacts = new ArrayList<>();
@@ -45,8 +41,8 @@ public class ContactsRepo {
     contacts.add(contact);
   }
 
-  // To add other methods (link the necessary ones to FileService methods).
 
+  // Methods.
   public List<Contact> findAll() {
     return contacts;
   }

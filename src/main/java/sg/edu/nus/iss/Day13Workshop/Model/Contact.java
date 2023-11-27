@@ -37,6 +37,7 @@ public class Contact {
   @Past(message = "Birth date must be a past date less than today.")
   private Date birthday;
 
+  // Constructor.
   public Contact(String name, String email, String phoneNumber, Date birthday) {
     this.name = name;
     this.email = email;
