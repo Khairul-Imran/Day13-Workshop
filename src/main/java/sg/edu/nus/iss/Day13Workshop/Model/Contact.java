@@ -18,6 +18,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Contact {
   
+  @Size(min = 8, message = "Contact ID must be at least 8 characters")
+  private String contactId;
+
   @NotEmpty(message = "First name is mandatory.")
   @Size(min = 3, max = 64, message = "First Name must be between 3 to 64 characters.")
   private String name;
@@ -33,5 +36,13 @@ public class Contact {
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   @Past(message = "Birth date must be a past date less than today.")
   private Date birthday;
+
+  public Contact(String name, String email, String phoneNumber, Date birthday) {
+    this.name = name;
+    this.email = email;
+    this.phoneNumber = phoneNumber;
+    this.birthday = birthday;
+    this.contactId = ""; // Proper Id to be set when saving the contact, using the service.
+  }
 
 }
